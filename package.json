@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "node --env-file=.env ./src/server.js",
+    "db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.js --out ./src/db/migrations",
+    "db:migrate": "node --env-file=.env ./src/db/migrate.js"
+    
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.30.6",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "postgres": "^3.4.4"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.20.14"
+  },
+  "type": "module"
+}
